@@ -37,7 +37,7 @@ jobs:
       run: az ml model download --name roberta-sequence --version 1 --download-path . --resource-group learn-mlops --workspace-name mlops-dev
  
     - name: retrieve the model from NO workspace
-      run: az ml model download --name roberta-sequence --version 1 --download-path . --resource-group learn-mlops
+      run: az ml model download --name roberta-sequence --version 1 --download-path .
  
     - name: Authenticate to Docker hub
       uses: docker/login-action@v1
