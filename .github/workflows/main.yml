@@ -21,7 +21,7 @@ jobs:
 
     - name: set auto-install of extensions
       run: |
-        az upgrade --yes
+        sudo apt-get update && sudo apt-get install --only-upgrade -y azure-cli
         az config set auto-upgrade.enable=yes
         az config set auto-upgrade.prompt=no
 
