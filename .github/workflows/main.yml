@@ -30,7 +30,7 @@ jobs:
       run: az extension add --name ml
       
     - name: attach workspace
-      run: az ml folder attach -w "mlops-dev" -g "practical-mlops"
+      run: az ml folder attach --workspace-name "mlops-dev" --resource-group "learn-mlops"
 
     - name: retrieve the model
       run: az ml model download -t "." --model-id "roberta-sequence:1"
