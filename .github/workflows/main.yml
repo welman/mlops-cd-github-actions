@@ -25,7 +25,10 @@ jobs:
 
     - name: set auto-install of extensions
       run: az config set auto-upgrade.prompt=no
-
+      
+    - name: workaround, auto extension upgrade does not work
+      run: az extension add --name ml
+      
     - name: attach workspace
       run: az ml folder attach -w "mlops-dev" -g "practical-mlops"
 
