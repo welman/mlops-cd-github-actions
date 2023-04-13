@@ -20,9 +20,10 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: set auto-install of extensions
-      run: az upgrade --yes \
-        && az config set auto-upgrade.enable=yes \
-        && az config set auto-upgrade.prompt=no
+      run: |
+        az upgrade --yes
+        az config set auto-upgrade.enable=yes
+        az config set auto-upgrade.prompt=no
 
     - name: attach workspace
       run: az ml folder attach -w "mlops-dev" -g "practical-mlops"
