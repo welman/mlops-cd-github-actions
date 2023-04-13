@@ -20,6 +20,9 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: set auto-install of extensions
+      run: az config set auto-upgrade.enable=yes
+
+    - name: set auto-install of extensions
       run: az config set auto-upgrade.prompt=no
 
     - name: attach workspace
