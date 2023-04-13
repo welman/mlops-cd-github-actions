@@ -19,7 +19,6 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-
     - name: upgrade az cli
       run: sudo apt-get update && sudo apt-get install --only-upgrade -y azure-cli
 
