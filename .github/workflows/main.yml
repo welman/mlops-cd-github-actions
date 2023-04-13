@@ -20,7 +20,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Temp fix the az 'ml' extension not recognised error
-      run: az upgrade
+      run: az upgrade --yes
 
     - name: set auto-install of extensions
       run: az config set extension.use_dynamic_install=yes_without_prompt
