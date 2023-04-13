@@ -24,7 +24,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install --only-upgrade -y azure-cli
 
     - name: set auto-install of extensions
-      run: az config set auto-upgrade.enable=yes && az config set auto-upgrade.prompt=no
+      run: az config set auto-upgrade.prompt=no
 
     - name: attach workspace
       run: az ml folder attach -w "mlops-dev" -g "practical-mlops"
