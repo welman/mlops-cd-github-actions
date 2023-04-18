@@ -1,3 +1,7 @@
+This demo pulls a model registry from the Azure ML workspace, builds the a docker with model in it, then publishes the docker image into docker hub.
+
+Github Actions is used to orchestrates the build steps.
+
 ### Notes
 * Implements mlops ch4
 * Use ml extension for az cli v2. Not to confuse ml v1 obsolete extensions.
