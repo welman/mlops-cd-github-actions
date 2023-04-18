@@ -33,10 +33,10 @@ jobs:
       run: az ml folder attach --workspace-name "mlops-dev" --resource-group "learn-mlops"
 
     - name: retrieve the model from workspace
-      if: ${{ false }}
       run: az ml model download --name roberta-sequence --version 1 --download-path . --resource-group learn-mlops --workspace-name mlops-dev
  
-    - name: retrieve the model from NO workspace
+    - name: retrieve the model from NO workspace --does not work
+      if: ${{ false }}
       run: az ml model download --name roberta-sequence --version 1 --download-path .
  
     - name: Authenticate to Docker hub
